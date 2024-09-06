@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     transition: 0.5s all;
+    overflow: hidden;
 }
 
 body{
@@ -53,8 +54,8 @@ body{
 @media (max-width: 768px) {
     body{
         width: 100%;
-        height: 100%;
-        overflow: hidden;
+        overflow-y: hidden;
+        overflow-x: hidden;
     }
     .All{
         width: 90%;
