@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/minimalista.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>{{ title }} - Retos 15/30</title>
+</head>
+
+<body>
+
+    <style>
+        .fon {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                cursor: none;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .fon {
+                display: block;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                color: white;
+                text-align: center;
+                position: absolute;
+                background-color: #222;
+            }
+
+
+
+        }
+    </style>
+
+    <!--Sino es usuario de pc mostrara este mensaje-->
+    <section class="fon">
+        <h1>
+            ESTA WEB ESTA HECHA SOLO PARA PC
+        </h1>
+        <p>
+            no es compatible con telefonos
+        </p>
+    </section>
+
+
+    <!--Donde se mostraras las plantillas-->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+
+</body>
+
+</html>
