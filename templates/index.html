@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+<section class="Tarjetas-Retos">
+
+    {% for data in data %}
+
+    <div class="Tarjeta">
+
+        <div class="img-tarjeta">
+            <img src="{{ url_for('static', filename=data.img) }}" alt="">
+        </div>
+
+        <div class="title-tarjeta">
+            <strong>{{data.title}}</strong>
+        </div>
+
+        <div class="info-tarjeta">
+            <p>{{data.info}}</p>
+        </div>
+    
+        <div class="data-tarjeta">
+            <span>Reto - {{data.reto}}</span>
+            <a href="{{data.link}}">Ver La Web</a>
+        </div>
+    
+    </div>
+    {% endfor%}
+
+
+</section>
+
+
+
+
+{% endblock %}

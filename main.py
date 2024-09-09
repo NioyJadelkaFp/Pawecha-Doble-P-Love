@@ -1,7 +1,7 @@
 from flask import Flask,render_template
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-import random
+import json
 
 def calcular_diferencia(fecha_inicio, fecha_final):
     diferencia:int = relativedelta(fecha_final, fecha_inicio)
@@ -10,6 +10,14 @@ def calcular_diferencia(fecha_inicio, fecha_final):
 
 
 app = Flask(__name__)
+
+@app.route('/')
+def index():
+    title:str = "Home"
+    with open('static/json/infoweb.json', 'r') as file:
+        data = json.load(file)
+
+    return render_template('index.html', data=data, title=title)
 
 @app.route('/hola')
 def hola():
