@@ -44,11 +44,19 @@
 }
 
 .contenedor a{
+    text-decoration: none;
     color: black;
-    text-align: start;
-    margin: 20px;
-    width: 90%;
-    height: 30px;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid;
+    box-shadow: 1px 1px 1px 0px;
+    transition: .2s all;
+}
+
+.contenedor a:hover{
+    transition: .2s all;
+    box-shadow: 3px 3px 0px 0px;
 }
 
 .contenedor span{
