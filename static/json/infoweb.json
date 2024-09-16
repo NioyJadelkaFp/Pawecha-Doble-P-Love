@@ -1,9 +1,0 @@
-[
-    {
-        "img": "img-web/holamundo.png",
-        "title": "Hola Mundo",
-        "info": "Una web que dice solo un hola mundo de manera distinta",
-        "reto": "Día 1",
-        "link": "/hola"
-    }
-]
